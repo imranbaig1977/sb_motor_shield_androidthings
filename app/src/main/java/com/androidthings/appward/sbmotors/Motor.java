@@ -5,10 +5,8 @@ import android.util.Log;
 import com.androidthings.appward.MainActivity;
 import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.PeripheralManagerService;
-import com.google.android.things.pio.Pwm;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created by imranbaig on 06/06/2017.

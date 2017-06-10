@@ -4,59 +4,66 @@ package com.androidthings.appward.sbmotors;
  * Created by imranbaig on 06/06/2017.
  */
 
+/**
+ * This class maps GPIO Pin numbering to BCM
+ *
+ * */
+
 public class RPiPinMap {
 
-    private static String[] pinMap;
+
+
+    private static String[] sPinMap;
      static
      {
-        pinMap = new String[41];
-        pinMap[0] = "";
-        pinMap[1] = "";
-        pinMap[2] = "";
-        pinMap[3] = "BCM2";
-        pinMap[4] = "";
-        pinMap[5] = "BCM3";
-        pinMap[6] = "";
-        pinMap[7] = "BCM4";
-        pinMap[8] = "BCM14";
-        pinMap[9] = "";
-        pinMap[10] = "BCM15";
-        pinMap[11] = "BCM17";
-        pinMap[12] = "BCM18";
-        pinMap[13] = "BCM27";
-        pinMap[14] = "";
-        pinMap[15] = "BCM22";
-        pinMap[16] = "BCM23";
-        pinMap[17] = "";
-        pinMap[18] = "BCM24";
-        pinMap[19] = "BCM10";
-        pinMap[20] = "";
-        pinMap[21] = "BCM9";
-        pinMap[22] = "BCM25";
-        pinMap[23] = "BCM11";
-        pinMap[24] = "BCM8";
-        pinMap[25] = "";
-        pinMap[26] = "BCM7";
-        pinMap[27] = "BCM0";
-        pinMap[28] = "BCM1";
-        pinMap[29] = "BCM5";
-        pinMap[30] = "";
-        pinMap[31] = "";
-        pinMap[32] = "BCM12";
-        pinMap[33] = "BCM13";
-        pinMap[34] = "";
-        pinMap[35] = "BCM19";
-        pinMap[36] = "BCM16";
-        pinMap[37] = "BCM26";
-        pinMap[38] = "BCM20";
-        pinMap[39] = "";
-        pinMap[40] = "BCM21";
+        sPinMap = new String[41];
+        sPinMap[0] = "";
+        sPinMap[1] = "";
+        sPinMap[2] = "";
+        sPinMap[3] = "BCM2";
+        sPinMap[4] = "";
+        sPinMap[5] = "BCM3";
+        sPinMap[6] = "";
+        sPinMap[7] = "BCM4";
+        sPinMap[8] = "BCM14";
+        sPinMap[9] = "";
+        sPinMap[10] = "BCM15";
+        sPinMap[11] = "BCM17";
+        sPinMap[12] = "BCM18";
+        sPinMap[13] = "BCM27";
+        sPinMap[14] = "";
+        sPinMap[15] = "BCM22";
+        sPinMap[16] = "BCM23";
+        sPinMap[17] = "";
+        sPinMap[18] = "BCM24";
+        sPinMap[19] = "BCM10";
+        sPinMap[20] = "";
+        sPinMap[21] = "BCM9";
+        sPinMap[22] = "BCM25";
+        sPinMap[23] = "BCM11";
+        sPinMap[24] = "BCM8";
+        sPinMap[25] = "";
+        sPinMap[26] = "BCM7";
+        sPinMap[27] = "BCM0";
+        sPinMap[28] = "BCM1";
+        sPinMap[29] = "BCM5";
+        sPinMap[30] = "";
+        sPinMap[31] = "";
+        sPinMap[32] = "BCM12";
+        sPinMap[33] = "BCM13";
+        sPinMap[34] = "";
+        sPinMap[35] = "BCM19";
+        sPinMap[36] = "BCM16";
+        sPinMap[37] = "BCM26";
+        sPinMap[38] = "BCM20";
+        sPinMap[39] = "";
+        sPinMap[40] = "BCM21";
     }
 
 
     public static String getPinName(int position /* 1 to 40*/)
     {
-        return pinMap[position];
+        return sPinMap[position];
     }
 
 }

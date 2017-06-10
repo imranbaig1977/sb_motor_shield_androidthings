@@ -6,38 +6,38 @@ package com.androidthings.appward.sbmotors;
 
 public class Config {
 
-    final int forwardPin;
-    final int reversePin;
-    final int pwmPin;
+    final int mForwardPin;
+    final int mReversePin;
+    final int mPwmPin;
 
     public Config(int pwmPin , int forwardPin, int reversePin) {
-        this.forwardPin = forwardPin;
-        this.reversePin = reversePin;
-        this.pwmPin = pwmPin;
+        this.mForwardPin = forwardPin;
+        this.mReversePin = reversePin;
+        this.mPwmPin = pwmPin;
     }
 
     public int getForwardPin() {
-        return forwardPin;
+        return mForwardPin;
     }
 
     public int getReversePin() {
-        return reversePin;
+        return mReversePin;
     }
 
     public int getPwmPin() {
-        return pwmPin;
+        return mPwmPin;
     }
 
 
     public String getForwardPinName() {
-        return RPiPinMap.getPinName(forwardPin);
+        return RPiPinMap.getPinName(mForwardPin);
     }
 
     public String getReversePinName() {
-        return  RPiPinMap.getPinName(reversePin);
+        return  RPiPinMap.getPinName(mReversePin);
     }
 
     public String getPwmPinName() {
-        return RPiPinMap.getPinName(pwmPin);
+        return RPiPinMap.getPinName(mPwmPin);
     }
 }
