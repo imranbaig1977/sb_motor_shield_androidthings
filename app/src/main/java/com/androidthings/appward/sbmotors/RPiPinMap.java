@@ -48,7 +48,7 @@ public class RPiPinMap {
         sPinMap[28] = "BCM1";
         sPinMap[29] = "BCM5";
         sPinMap[30] = "";
-        sPinMap[31] = "";
+        sPinMap[31] = "BCM6";
         sPinMap[32] = "BCM12";
         sPinMap[33] = "BCM13";
         sPinMap[34] = "";
