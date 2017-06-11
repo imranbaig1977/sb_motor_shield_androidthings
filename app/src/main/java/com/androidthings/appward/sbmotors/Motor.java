@@ -26,9 +26,6 @@ public class Motor {
     Gpio mArrowPin;
 
 
-    //Pwm mSpeedPWM;
-
-
     public Motor(Config config1, Config config2, Arrow arrow) {
         mConfigs = new Config[2];
         mConfigs[0] = config1;
@@ -60,11 +57,6 @@ public class Motor {
             mArrowPin = mManager.openGpio(mArrow.getPinName());
 
 
-
-            /*mSpeedPWM = mManager.openPwm(*//*config.getPwmPinName()*//*"PWM1");
-            mSpeedPWM.setPwmFrequencyHz(50);
-            mSpeedPWM.setPwmDutyCycle(0);*/
-
             configureOutput(mSpeedGPIO, 1);
             configureOutput(mGpioForward, 0);
             configureOutput(mGpioReverse, 0);
@@ -83,9 +75,8 @@ public class Motor {
     public void forward(int speed) throws IOException
     {
         try {
-            mArrowPin.setValue(!mArrowPin.getValue());
+            mArrowPin.setValue(mArrowPin.getValue());
             mGpioForward.setValue(true);
-            //mSpeedPWM.setPwmDutyCycle(speed);
             mGpioReverse.setValue(false);
         }catch (Exception e)
         {
@@ -102,7 +93,6 @@ public class Motor {
     {
 
         try {
-            //mSpeedPWM.setPwmDutyCycle(speed);
             mGpioForward.setValue(false);
             mGpioReverse.setValue(true);
         }
@@ -121,7 +111,6 @@ public class Motor {
     {
 
         try {
-            //mSpeedPWM.setPwmDutyCycle(0);
             mGpioForward.setValue(false);
             mGpioReverse.setValue(false);
         }

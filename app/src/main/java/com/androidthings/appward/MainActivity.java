@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 
 import com.androidthings.appward.sbmotors.SBMotors;
 
@@ -42,15 +43,75 @@ public class MainActivity extends Activity {
         //BCM12, BCM13, BCM16, BCM17, BCM18, BCM19, BCM20, BCM21, BCM22, BCM23, BCM24, BCM25, BCM26, BCM27, BCM4, BCM5, BCM6
 
         mSBMotors = new SBMotors();
-
         try {
             mSBMotors.initializeTwoMotors(0);
-            mHandler.post(mRunnable);
+
+            Log.d(TAG, "Ready for keyboard");
+
+            //mHandler.post(mRunnable); //
         }
         catch (Exception ex)
         {
             ex.printStackTrace();
         }
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        Log.i("onKeyDown", "keyCode"+keyCode+ "KeyEvent"+event );
+
+        try{
+            switch (event.getKeyCode())
+            {
+                case KeyEvent.KEYCODE_DPAD_DOWN:
+                    mSBMotors.reverse(50);
+                    break;
+
+                case KeyEvent.KEYCODE_DPAD_UP:
+                    mSBMotors.forward(50);
+
+                    break;
+
+                case KeyEvent.KEYCODE_DPAD_RIGHT:
+                    mSBMotors.right(50);
+                    break;
+
+                case KeyEvent.KEYCODE_DPAD_LEFT:
+                    mSBMotors.left(50);
+
+                    break;
+
+                case KeyEvent.KEYCODE_B:
+                    mSBMotors.stop(50);
+                    break;
+            }
+        }catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+
+        return super.onKeyDown(keyCode, event);
+
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+
+        Log.i("onKeyUp", "keyCode"+keyCode+ "KeyEvent"+event );
+
+        try
+        {
+            mSBMotors.stop(50);
+        }catch (Exception ex)
+        {
+
+        }
+
+        return super.onKeyUp(keyCode, event);
+
     }
 
     @Override

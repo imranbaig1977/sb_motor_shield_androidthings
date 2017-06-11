@@ -65,6 +65,20 @@ public class SBMotors {
 
     }
 
+    public void left(int speed) throws IOException
+    {
+        getMotor1().forward(speed);
+        getMotor2().stop();
+
+    }
+
+    public void right(int speed) throws IOException
+    {
+        getMotor1().stop();
+        getMotor2().forward(speed);
+
+    }
+
     public void reverse(int speed) throws IOException
     {
         getMotor1().reverse(speed);
