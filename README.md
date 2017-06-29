@@ -1,5 +1,7 @@
 ## SB Motor Shield for Android things
 
+https://www.youtube.com/watch?v=ElelbdAgl7E&t=91s
+
 This repo ports https://github.com/sbcshop/motor-shield/ for Android Things for Raspberry PI.
 
 Code is written for controlling two motors car with keyboard. You can easily change the code for controlling 4 motors 
