@@ -1,6 +1,6 @@
 ## SB Motor Shield for Android things
 
-https://www.youtube.com/watch?v=ElelbdAgl7E&t=91s
+https://www.youtube.com/watch?v=ElelbdAgl7E
 
 This repo ports https://github.com/sbcshop/motor-shield/ for Android Things for Raspberry PI.
 
